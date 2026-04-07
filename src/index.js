@@ -377,9 +377,12 @@ const HTML_PAGE = `<!doctype html>
     }
     main {
       min-height:100%;
-      display:grid;
-      place-items:center;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
       padding:24px;
+      gap:18px;
     }
     .card {
       width:min(92vw,900px);
@@ -414,13 +417,18 @@ const HTML_PAGE = `<!doctype html>
     .row {
       margin-top:.5rem;
     }
+    .page-ad {
+      width:min(92vw,900px);
+      display:flex;
+      justify-content:center;
+    }
     .ad-wrap {
-      margin-top: 18px;
       display: flex;
       justify-content: center;
+      width:100%;
     }
     .ad-box {
-      width: min(100%, 720px);
+      width: min(100%, 900px);
       min-height: 90px;
       background: rgba(255,255,255,.03);
       border-radius: 14px;
@@ -463,16 +471,6 @@ const HTML_PAGE = `<!doctype html>
       <div id="reason" class="meta reason"></div>
       <div id="threngsli" class="meta row"></div>
       <div id="err" class="meta row error" style="display:none"></div>
-      <div class="ad-wrap">
-        <div class="ad-box">
-          <ins class="adsbygoogle"
-               style="display:block"
-               data-ad-client="ca-pub-5396954897194569"
-               data-ad-slot="9399802937"
-               data-ad-format="auto"
-               data-full-width-responsive="true"></ins>
-        </div>
-      </div>
 
       <details id="dbg" style="display:none">
         <summary>Stillingar og bilanagreining</summary>
@@ -487,6 +485,18 @@ const HTML_PAGE = `<!doctype html>
         Gögn: Vegagerðin • Uppfærðist á 5 mínútna fresti •
         <a href="https://www.umferdin.is/" target="_blank" rel="noopener noreferrer">Umferdin.is</a>
       </footer>
+    </section>
+    <section class="page-ad" aria-label="Auglýsing">
+      <div class="ad-wrap">
+        <div class="ad-box">
+          <ins class="adsbygoogle"
+               style="display:block"
+               data-ad-client="ca-pub-5396954897194569"
+               data-ad-slot="9399802937"
+               data-ad-format="auto"
+               data-full-width-responsive="true"></ins>
+        </div>
+      </div>
     </section>
   </main>
   <script src="/app.js"></script>
