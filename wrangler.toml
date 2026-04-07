@@ -1,0 +1,6 @@
+name = "erheidinopin"
+main = "src/index.js"
+compatibility_date = "2026-04-07"
+
+[observability]
+enabled = true
